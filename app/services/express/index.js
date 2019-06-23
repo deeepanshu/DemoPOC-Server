@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const { queryErrorHandler, bodyErrorHandler } = require('../errorHandlers');
-
+require('./../firebase')
 module.exports = (apiRoot, routes) => {
     const app = express();
     app.use(morgan('dev'));
